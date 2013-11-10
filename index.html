@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>SNOW GL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+  <link href="css/styles.css" rel="stylesheet" media="screen">
+<!-- Google Analytics -->
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-32354266-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</head>
+<body>
+  <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="brand" href="#">NSIDC DATA + WebGL</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li><a href="http://nsidc.org/data/mod10a2.html" target="_blank">About</a></li>
+            <li><a href="https://github.com/betolink" target="_blank">@betolink</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container fill">
+      <div class="span3 fill">
+        <h3>10 Years of Snow</h3>
+        <p>The MODIS/Terra Snow Cover (MOD10A2) data set contains data for maximum snow cover extent over an eight-day compositing period.</p>
+        <p>Select a year and navigate the planet.</p>
+        <h4>Year</h4>
+        <div class="btn-group">
+                <button class="btn btn-inverse">
+                <select id="years">
+                  <option></option>
+                  <option>2002</option>
+                  <option>2003</option>
+                  <option>2004</option>
+                  <option>2005</option>
+                  <option>2006</option>
+                  <option>2007</option>
+                  <option>2008</option>
+                  <option>2009</option>
+                  <option>2010</option>
+                  <option>2011</option>
+                  <option>2012</option>
+                  <option>2013</option>
+                </select>
+                </button>
+        </div>
+        <div style="background-color:#ff0000;width:14px;height:14px;margin-top:20px"><p style="margin-left:20px;width:90px;">Snow</p></div>
+        <div style="background-color:#ffb0ff;width:14px;height:14px;"><p style="margin-left:20px;width:90px;">Lake Ice</p></div>
+        <div style="background-color:#00ff00;width:14px;height:14px;"><p style="margin-left:20px;width:100px;">Land(No snow)</p></div>
+        <div style="background-color:#64c8ff;width:14px;height:14px;"><p style="margin-left:20px;width:90px;">Clouds</p></div>
+        <div style="background-color:#232375;width:14px;height:14px;"><p style="margin-left:20px;width:90px;">Water</p></div>
+        <div style="background-color:#ffff96;width:14px;height:14px;"><p style="margin-left:20px;width:100px;">Not determined</p></div>
+        <h3 id="current-week"/>
+      </div>
+      <div class="span7" id="container" style="text-align: center; vertical-align: top;"></div>
+  </div><!-- /container -->
+
+  <script src="./scripts/three.min.js"></script>
+  <script src="./scripts/TrackballControl.js"></script>
+  <script src="./js/bootstrap-without-jquery.min.js"></script>
+  <script src="./scripts/rasters.json"></script>
+  <script src="./scripts/Render.js"></script>
+
+</body>
+</html>
