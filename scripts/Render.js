@@ -138,6 +138,8 @@ function loadYear(e){
   yearDOM = document.getElementById( 'years' );
   year = yearDOM[yearDOM.selectedIndex].value;
   console.log("Loading " + year);
+  var elem = document.getElementById('current-week');
+  elem.innerText = "LOADING DATA...";
   loadTextures(year.toString());
 };
 
